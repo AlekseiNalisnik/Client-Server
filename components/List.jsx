@@ -6,4 +6,4 @@ const List = ({ list }) => (
     </ul>
 );
 
-export default List;
+export { List };

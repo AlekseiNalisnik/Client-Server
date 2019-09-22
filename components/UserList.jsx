@@ -16,7 +16,7 @@ class UserList extends Component {
         getUsers({ firstName: this.state.firstName })
             .then(({ data }) =>  {
                 console.log('data - ', data);
-                return this.setState({ users: data });
+                this.setState({ users: data });
             });
        
     }
@@ -24,13 +24,16 @@ class UserList extends Component {
     render() {
         const { users } = this.state;
 
+        if(users.length == 0) {
+            return (<div>There are not any data!</div>);
+        } else 
+
         return (
             <div>
                 <h3>ppp</h3>
-                {/* <ul>
-                    {users.map((item, index) => console.log(item))} 
-                    {/* <li key={index}>{item.firstName}</li> */}
-                {/* </ul> */} */}
+                <ul>
+                    {users.map((item, index) => <li key={index}>{item.firstName} + {item.secondName}</li>)} 
+                </ul>
             </div>
         );
     }

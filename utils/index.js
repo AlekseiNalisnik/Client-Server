@@ -3,9 +3,8 @@ const getData = (data, count) => {
 };
 
 // TODO функция c двумя параметрами getUsers(data, firstName)
-const getUsers = (data) => {
-    // data.filter((item) => (firstName == item));
-    return data;
+const getUsers = (data, firstName) => {
+    return data.filter((item) => (firstName == item.firstName));
 };
 
 module.exports = {

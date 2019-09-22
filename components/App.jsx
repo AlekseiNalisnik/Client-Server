@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import List from './List';
+import {List} from './List';
 
 import {getList} from '../sources/list';
 
@@ -32,6 +32,7 @@ class App extends Component {
 
     render() {
         const { list } = this.state;
+        const { users } = this.props;
 
         return (
             <div>

@@ -24,10 +24,11 @@ app.get('/list', (req, res) => {
 
 // TODO метод обработки запроса здесь
 app.get('/users', (req, res) => {
-    console.log('req - ', req);
-    const { message } = req.query;
+    const { firstName } = req.query;
+    console.log('firstName - ', firstName);
     
-    const usersArray = getUsers(users);
+    const usersArray = getUsers(users, firstName);
+    console.log('usersArray - ', usersArray);
 
     res.send(usersArray);
 });
