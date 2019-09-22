@@ -4,6 +4,8 @@ import List from './List';
 
 import {getList} from '../sources/list';
 
+import UserList from '../components/UserList';
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -35,6 +37,7 @@ class App extends Component {
             <div>
                 <h3>ddd</h3>
                 <List list={list}/>
+                <UserList />
                 {/*TODO рендер компонента здесь*/}
             </div>
         );
